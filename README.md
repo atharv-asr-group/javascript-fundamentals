@@ -1,0 +1,8 @@
+Anyone can build browsers, we have to follow a standard(given by ECMA international) that the browser-building companies have to follow. Companies like Google and Firefox wrote their engines to convert JS code to binary that can then be understood by the machine.
+Native programs- That we can run on local machines. Earlier JS could only be used as web programs, so Node.js written by Google was pulled out and converted to a backend framework. Node.js is not a language or framework, it is just a JS runtime used to run JS in the backend in a local machine outside the Chrome browser.
+JS is single-threaded language, which means it is kind of independent of how powerful our machine is, as it will utilize only one thread. 
+JS is Asynchronous. Reading from a file, waiting for input from the key, writing to a database, or sending an HTTP request to a backend are all asynchronous tasks, as they can block the code if it is running synchronously. While asynchronous task is running we can do other tasks. (analogy- tell your friend to tell you that 1 hour has passed and now I have to drink water when I am busy studying. So now I don't have to look at the clock and can focus only on studying.) 
+JS is loosely typed, the argument of a function need not be defined with its type. 
+Interpreted language, goes line by line. While other languages like C++ will first do Compile checks, in its compilation time, it will give errors if the code has even a single error. (in JS the thread never goes inside a function until it is called, it just registers the function name.)
+APIs- exposed by the runtime environment, for example, fs, fetch, setTimeout, and setInterval are APIs.
+SetTimeout takes a callback, and it is an asynchronous function.
