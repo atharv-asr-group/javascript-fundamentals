@@ -5,4 +5,11 @@ JS is Asynchronous. Reading from a file, waiting for input from the key, writing
 JS is loosely typed, the argument of a function need not be defined with its type. 
 Interpreted language, goes line by line. While other languages like C++ will first do Compile checks, in its compilation time, it will give errors if the code has even a single error. (in JS the thread never goes inside a function until it is called, it just registers the function name.)
 APIs- exposed by the runtime environment, for example, fs, fetch, setTimeout, and setInterval are APIs.
-SetTimeout takes a callback, and it is an asynchronous function.
+SetTimeout, setInterval takes a callback, and it is an asynchronous function.
+If you know about async JS, callback, Promises, and arrow functions you can sprint much faster.
+JS is asynchronous but it does not mean that it can do 2 tasks at the same time, if the thread is doing a time-consuming task and an asynchronous callback function is called during that  time, the async function will not work as the thread is busy executing the long task at the moment.
+Promises are not needed as such in js, you can do the same thing without them, but js peeps want code to be clean, and using promises you can write cleaner code.
+
+Call stack, web APIs, event loop, callback queue. Web Apis is the friend that does the async task in the background. Once that is done, it puts the callback function in the callback queue, the function then waits there until the call stack is empty and the event loop pulls the function from the callback queue and puts it into the call stack for executing it. http://latentflip.com/loupe Check this website to see how the simulation is done
+Async chaining is done if you want one task to happen before another async task, because the first task is more important, eg, on chatgpt website the name appears before the upgrade plan and our history. Callback hell is this chaining of one async call after another, the code looks ugly due to this if we do more than 3 async calls one inside another.
+Promise returns an object, .then() is a function that is used to call the function we want to execute once the promise is returned(the callback function). The promise function takes resolve as an argument, when resolve is called, the control reaches then, resolve is the first argument of promise function, can be called anything.
