@@ -1,0 +1,13 @@
+function logResponseBody(jsonBody){
+    console.log(jsonBody)
+}
+function callbackFn(result){
+    console.log(result)
+    result.json().then(logResponseBody)
+}
+
+var sendObj={
+    method:"GET"
+}
+fetch("http://localhost:3000/createuser?counter=10",
+sendObj).then(callbackFn)
